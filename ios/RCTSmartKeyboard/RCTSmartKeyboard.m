@@ -11,7 +11,7 @@ RCT_EXPORT_MODULE()
         //开启，默认为YES
         manager.enable = YES;
         //控制点击背景是否收起键盘，默认为NO
-        manager.shouldResignOnTouchOutside = YES;
+        manager.shouldResignOnTouchOutside = NO;
         //控制键盘上的工具条文字颜色是否用户自定义
         manager.shouldToolbarUsesTextFieldTintColor = YES;
         //控制是否显示键盘上的工具条，默认为YES
@@ -33,4 +33,10 @@ RCT_EXPORT_METHOD(disable)
 {
     [IQKeyboardManager sharedManager].enable = NO;
 }
+
+RCT_EXPORT_METHOD(setKeyboardDistanceFromTextField: (CGFloat) value)
+{
+    [IQKeyboardManager sharedManager].keyboardDistanceFromTextField = value;
+}
+
 @end
