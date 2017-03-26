@@ -9,4 +9,5 @@ var {
 module.exports = Platform.OS==='ios' ? NativeModules.SmartKeyboard : {
     enable(){},
     disable(){},
+    setKeyboardDistanceFromTextField(){}
 };
